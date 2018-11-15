@@ -1,0 +1,79 @@
+<div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+              
+                <!-- /.col-lg-12 -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="card">
+                    <div class="card-header bg-info text-white">Poster condidature</div>
+                    <div class="card-body">
+                            <div class="form-group">
+                              
+                                
+                                    <label>prenom:</label><br> <input path="nom" class="form-control" placeholder="Prenom"  [(ngModel)]="candidature.prenom" />  
+                               <label> nom:</label><br> <input path="nom" class="form-control" placeholder="Nom"  [(ngModel)]="candidature.nom"/>
+                               <label>code Candidature:</label><br> <input path="code codeCandidature" class="form-control" placeholder="codeCandidature" [(ngModel)]="candidature.codeCandidature" /> 
+                               <label>ville salle:</label> <select class="form-control"  [(ngModel)]="candidature.villeSalle">
+                                <option>Casablanca</option>
+                                <option>Rabat</option>
+                               </select> 
+                              <br>
+                               <label>nom salle:</label>  <br><input path="salle" class="form-control" placeholder="nom salle"  [(ngModel)]="candidature.nomSalle" />
+                               <label>numero telephone:</label>  <br><input path="telephone" class="form-control" placeholder="numero telephone"  [(ngModel)]="candidature.numero"/>
+                               <label> profil: </label><br> <input path="profil" class="form-control" placeholder="profil"  [(ngModel)]="candidature.profil" />
+                               <label>Type de jeu:</label> <select class="form-control"  [(ngModel)]="candidature.type">
+                                  <option>Tournoi</option>
+                                  <option>Match</option>
+                                 </select> 
+                                  <br>
+                                  <button class="btn btn-success"  (click)="saveCandidature()">Confirmer</button>
+                            </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  entrer ton code: <input path=""  placeholder="codeCandidature"  [(ngModel)]="codeCandidature" /> 
+                  <button class="btn btn-success" (click)="chercher()">rechercher</button>
+                  <br>
+                  <br>       
+                  <table class="table table-striped">
+                    <thead>
+                      <tr class="table-primary">
+                        <th scope="col">codeCandidature</th>
+                        <th scope="col">nom</th>
+                        <th scope="col">ville</th>
+                        <th scope="col">nom salle</th>
+                        <th scope="col">jour</th>
+                        <th scope="col">temps d epart</th>
+                        <th scope="col">temps de fin</th>                        
+                        <th scope="col">accepter</th>
+                        <th scope="col">refusé</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr  *ngFor="let  message of pageCandidature">
+                       <td>{{message.codeCandidature}}</td>
+                       <td>{{message.nom}}</td>
+                       <td>{{message.villeSalle}}</td>
+                       <td>{{message.nomSalle}}</td>
+                    
+                       <td>{{message.jour}}</td>
+                       <td>{{message.tempsDepart}}</td>
+                       <td>{{message.tempsFin}}</td>
+                      
+                       <td>  <button class="btn btn-success" (click)="edit(message)">accepter</button></td>
+                       <td>  <button class="btn btn-success" (click)="delete(message)" >refuser</button></td>
+                     
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+                 

@@ -1,0 +1,184 @@
+<ngb-carousel >
+    <ng-template ngbSlide>
+      <img src="assets/images/nature/terrain.jpg" class="img-rounded" alt="Cinque Terre" width="800" height="300"  style="display: block; width: 100%;"> 
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="assets/images/nature/4.jpg" class="img-rounded" alt="Cinque Terre" width="800" height="300"  style="display: block; width: 100%;"> 
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img src="assets/images/nature/terrain2.jpg" class="img-rounded" alt="Cinque Terre" width="800" height="300" style="display: block; width: 100%;"> 
+      <div class="carousel-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+    </ng-template>
+  
+  </ngb-carousel>
+
+<br>
+<br>
+  <div class="col-lg-10">
+    <P>
+        Les sports de foot en salle, tels que le fut 5, le 3×3 et le jorkyball sont des sports qui se développent rapidement, avec un esprit de fairplay.</P>
+    <p>Le foot en salle a su séduire un grand nombre de joueurs même ceux qui n’ont jamais pratiqué le foot !  Son public est relativement jeune et complètement à l’aise avec l’outil informatique et l’internet.</p>
+    <div>
+      <strong>notre site</strong>   est parfaitement adapté à la gestion des  joueurs et des clubs de foot indoor car il résoud la problématique de réservation à 4 ou plus !
+    <p>Avec un haut niveau de service, notre site offre une solution de réservation en ligne sur mesure en incluant les adaptations graphiques de chaque club ! Evitez la fuite des clients : Chaque club a donc son propre système de réservation en ligne avec le graphisme qui lui convient !</p>
+    </div> 
+    <br>
+<br>
+        <h1 style="color:chocolate;text-align:center">Les statistique du salle</h1>
+    <br>
+    <div class="row">
+<div class="col-lg-4 col-md-6" style="margin-top: 20px">
+            <div class="card border-primary">
+                <div class="card-body bg-primary text-white">
+                    <div class="row">
+                        <div class="col-3">
+                          
+                            <i class="fa fa-random fa-5x"></i>
+                           
+                        </div>
+                        <div class="col-9 text-right">
+                            <h1>{{CountTournoi}}</h1>
+                              tournoi
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="card-footer bg-light">
+                        <button type="button" class="btn btn-link" (click)="onCreate1()">voir les details</button>
+                        <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+               
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+          <div class="card border-secondary">
+              <div class="card-body bg-secondary text-white">
+                  <div class="row">
+                      <div class="col-3">
+                          <i class="fa fa-random fa-5x"></i>
+                      </div>
+                      <div class="col-9 text-right">
+                          <h1>{{CountMatch}}</h1>
+                            Match
+                      </div>
+                  </div>
+              </div>
+              
+                  <div class="card-footer bg-light">
+                      <span class="float-left">   <button type="button" class="btn btn-link" (click)="onCreate2()">voir les details</button></span>
+                      <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                      <div class="clearfix"></div>
+                  </div>
+              
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+        <div class="card border-success">
+            <div class="card-body bg-success text-white">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-random fa-5x"></i>
+                    </div>
+                    <div class="col-9 text-right">
+                        <h1>{{CountAbonnement}}</h1>
+                        abonnement
+                    </div>
+                </div>
+            </div>
+            
+                <div class="card-footer bg-light">
+                    <span class="float-left">   <button type="button" class="btn btn-link" (click)="onCreate3()">voir les details</button></span>
+                    <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+           
+        </div>
+    </div>
+        <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+            <div class="card border-danger">
+                <div class="card-body bg-danger text-white">
+                    <div class="row">
+                        <div class="col-3">
+                            
+                            <i class="fa fa-book fa-5x"></i>
+                        </div>
+                        <div class="col-9 text-right">
+                            <h1>{{ CountClient }}</h1>
+                            <h4> Client</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="card-footer bg-light text-danger">
+                        <span class="float-left">   <button type="button" class="btn btn-link" (click)="onCreate1()">voir les details</button></span>
+                        <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+              
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+            <div class="card border-warning">
+                <div class="card-body bg-warning text-white">
+                    <div class="row">
+                        <div class="col-3">
+                            <i class="fa fa-suitcase fa-3x"></i>
+                         
+                        </div>
+                        <div class="col-9 text-right">
+                            <h1>{{CountAccessoire}}</h1>
+                            <h4>accessoire</h4>
+                        </div>
+                    </div>
+                </div>
+               
+                    <div class="card-footer bg-light text-warning">
+                        <span class="float-left">   <button type="button" class="btn btn-link" (click)="onCreate1()">voir les details</button></span>
+                        <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6" style="margin-top: 20px">
+            <div class="card border-info">
+                <div class="card-body bg-info text-white">
+                    <div class="row">
+                        <div class="col-3">
+                            <i class="fa fa-university fa-3x"></i>
+                            
+                        </div>
+                        <div class="col-9 text-right">
+                            <h1>{{ CountBlack }}</h1>
+                            <h4>black lister</h4>
+                        </div>
+                    </div>
+                </div>
+              
+                    <div class="card-footer bg-light text-info">
+                        <span class="float-left">   <button type="button" class="btn btn-link" (click)="onCreate1()">voir les details</button></span>
+                        <span class="float-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+           
+<br>
+<br>
+<br>
+       

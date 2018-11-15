@@ -1,0 +1,34 @@
+<table class="table table-striped">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">codeAbonnement</th>
+      <th scope="col">nom</th>
+      <th scope="col">ville</th>
+      <th scope="col">nom salle</th>
+      <th scope="col">date d epart</th>
+      <th scope="col">date fin</th>
+      <th scope="col">temps d epart</th>
+      <th scope="col">temps fin</th>
+
+      <th scope="col">accpter</th>
+      <th scope="col">refuse</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let abonnement of pageAbonnement">
+     <td>{{abonnement.codeabonnement}}</td>
+     <td>{{abonnement.nom}}</td>
+     <td>{{abonnement.villeSalle}}</td>
+     <td>{{abonnement. nomSalle}}</td>
+     <td>{{abonnement.dateEpart}}</td>
+     <td>{{abonnement.dateFin}}</td>
+     <td>{{abonnement.tempsDepart}}</td>
+     <td>{{abonnement.tempsFin}}</td>
+     <td>  <button class="btn btn-outline-success" (click)="edit(abonnement)">accepter</button></td>
+     <td>  <button class="btn btn-outline-danger" (click)="delete(abonnement)" >refuser</button></td>
+   
+    
+    </tr>
+  </tbody>
+</table>

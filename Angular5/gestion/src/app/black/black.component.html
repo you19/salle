@@ -1,0 +1,30 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">black lister un personne</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <br>
+        <br>
+        <div class="card">
+                <div class="card-header bg-info text-white">black lister un personne</div>
+                <div class="card-body">
+                        <div class="form-group">
+                          
+                            
+                           
+                           <label> nom :</label><br> <input path="nom" class="form-control" placeholder="nom "  [(ngModel)]="black.nom"  />
+            
+                           <label>prenom:</label>  <br><input path="prenom" class="form-control" placeholder="prenom"  [(ngModel)]="black.prenom"  />
+                         
+                           <label>cause:</label> <textarea class="form-control"  [(ngModel)]="black.cause">
+                                </textarea>
+                               <br>
+                              <button class="btn btn-success" (click)="saveBlack()"  >Confirmer</button>
+                       
+                       </div>
+                              <div class="card-footer">
+                            </div>
+                          </div>

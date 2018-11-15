@@ -1,0 +1,45 @@
+<br>
+<br>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="table-primary">
+      
+      <th scope="col">codeTournoi</th>
+      <th scope="col">nom</th>
+      <th scope="col">ville</th>
+      <th scope="col">nom salle</th>
+      <th scope="col">nbrEquipe</th>
+      <th scope="col">nbrEquipeTotal</th>
+      <th scope="col">telephone</th>
+      <th scope="col">accepter</th>
+      <th scope="col">refusé</th>
+      
+     
+    
+ 
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let tournoi of pageTournoi">
+     
+     <td>{{tournoi.codetournoi}} </td> 
+     <td>{{tournoi.nom}}</td>
+     <td>{{tournoi.villeSalle}}</td>
+     <td>{{tournoi.nomSalle}}</td>
+     <td>{{tournoi.nbrEquipe}}</td>
+    <td>{{tournoi.nbrEquipeTotal}}</td>
+    <td>{{tournoi.num}}</td>
+    <td>  <button class="btn btn-outline-success" (click)="edit(tournoi)">accepter</button></td>
+    <td>  <button class="btn btn-outline-danger" (click)="delete(tournoi)" >refuser</button></td>
+    <td>  <button class="btn btn-outline-danger" (click)="del(tournoi.id)" >refuser</button></td>
+     
+     
+     
+   
+     
+    </tr>
+  </tbody>
+</table>
+

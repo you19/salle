@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+      <tr class="table-primary">
+        <th scope="col">codeTournoi</th>
+        <th scope="col">nom</th>
+        <th scope="col">ville</th>
+        <th scope="col">nom salle</th>
+        <th scope="col">nbr d equipe total</th>
+        <th scope="col">nbr d equipe</th>
+        
+        <th scope="col">verification</th>
+    
+   
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let tournoi of pageTournoi">
+       <td>{{tournoi.codetournoi}}</td>
+       <td>{{tournoi.nom}}</td>
+       <td>{{tournoi.villeSalle}}</td>
+       <td>{{tournoi.nomSalle}}</td>
+       <td>{{tournoi.nbrEquipeTotal}}</td>
+       <td>{{tournoi.nbrEquipe}}</td>
+       <td>{{tournoi.verification}}</td>
+     

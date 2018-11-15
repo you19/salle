@@ -1,0 +1,40 @@
+
+<br>
+<br>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr class="table-primary">
+
+      <th scope="col">codeCandidature</th>
+      <th scope="col">nom</th>
+      <th scope="col">prenom</th> 
+      <th scope="col">type</th>
+      <th scope="col">profil</th>
+      <th scope="col">ville</th>
+      <th scope="col">nom salle</th>
+      <th scope="col">numero</th>
+                      
+      <th scope="col">envoyer</th>
+     
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let tournoi of pageTournoi">
+     <td>{{tournoi.codeCandidature}}</td>
+     <td>{{tournoi.nom}}</td>
+     <td>{{tournoi.prenom}}</td>
+     <td>{{tournoi.type}}</td>
+     <td>{{tournoi.profil}}</td>
+     <td>{{tournoi.villeSalle}}</td>
+     <td>{{tournoi.nomSalle}}</td>
+     <td>{{tournoi.numero}}</td>
+  
+      <button (click)="envoyer(tournoi.codeCandidature)" class="btn btn-outline-info">envoyer</button>
+  
+  </tr>
+  </tbody>
+</table>
+

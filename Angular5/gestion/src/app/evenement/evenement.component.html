@@ -1,0 +1,37 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> créé ton nouveau evenement</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <br>
+        <br>
+        <div class="card">
+                <div class="card-header bg-info text-white">Evenement</div>
+                <div class="card-body">
+                        <div class="form-group">
+                          
+                            
+                           <label>ville salle:</label> <select class="form-control" [(ngModel)]="evenement.villeSalle">
+                            <option>Casablanca</option>
+                            <option>Rabat</option>
+                           </select> 
+                           <label> nom salle:</label><br> <input path="salle" class="form-control" placeholder="nom salle"  [(ngModel)]="evenement.nomSalle" />
+            
+                           <label>date d epart:</label>  <br><input type="date" path="date" class="form-control" placeholder="date d epart"  [(ngModel)]="evenement.dateEpart" />
+                           <label>date fin:</label>  <br><input type="date" path="date1" class="form-control" placeholder="date fin"  [(ngModel)]="evenement.dateFin" />
+                           
+                           <label>description:</label> <textarea class="form-control" [(ngModel)]="evenement.description">
+                                </textarea>
+                               <br>
+                              <button class="btn btn-success" (click)="saveEvenement()">Confirmer</button>
+                       
+                       </div>
+                              <div class="card-footer">
+                            </div>
+                          </div>
+              
+              
+             

@@ -1,0 +1,18 @@
+.button1 {
+    left: 1000px;
+   }
+   .marge {
+    margin-left: 5em;
+    }
+    .relative {
+        position: relative;
+        left: 30px;
+      
+    }    
+    .button3 {background-color: #f44336;
+        left: 30px;
+        font-size: 20px;
+   
+        border-radius: 12px
+
+    }

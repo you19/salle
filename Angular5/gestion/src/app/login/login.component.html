@@ -1,0 +1,59 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulaire</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+    
+  <form  >
+      <mat-tab-group>
+          <mat-tab label="login">
+    <div class="container">
+      <img src="assets/images/nature/1.jpg" alt="image" />
+    <div class="form-input"><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+     <input  type="text"  placeholder="Enter Username" [(ngModel)]="credentials.username" [ngModelOptions]="{standalone: true}" /></div>
+    <div class="form-input"><i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+      <input type="password"  placeholder="Enter Password" [(ngModel)]="credentials.password" [ngModelOptions]="{standalone: true}" /></div>
+  <br>
+      <button type="submit" class="btn btn-light" (click)="login()" >valider</button>
+   <br>
+   <br>
+   
+  </div>
+
+ </mat-tab>
+    <mat-tab label="Sign up"><div class="container">
+        <img src="assets/images/nature/1.jpg" alt="image" />
+        <br>
+        <br>
+        <div class="form-input"><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        <input type="text"  placeholder="Enter nom" [(ngModel)]="client.nom" [ngModelOptions]="{standalone: true}" /></div>
+        <div class="form-input"><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        <input type="text"  placeholder="Enter prenom" [(ngModel)]="client.prenom" [ngModelOptions]="{standalone: true}"/></div>
+        <div class="form-input"><i class="fa fa-envlope fa-2x" aria-hidden="true"></i>
+       <input  type="text"  placeholder="Enter email" [(ngModel)]="client.adress" [ngModelOptions]="{standalone: true}" /></div>
+       <div class="form-input"><i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+        <input type="password"  placeholder="Enter Password" [(ngModel)]="client.motdDePass" [ngModelOptions]="{standalone: true}" /></div>
+    
+        <button type="submit" class="btn btn-light" (click)="saveClient()" >confirmer</button>
+     <br>
+     <br>
+   
+    </div></mat-tab>
+   
+  </mat-tab-group>
+</form>
+</body>
+
+
+
+
+
+
+  
+      
+     
+  
+   
+  

@@ -1,0 +1,124 @@
+<div id="page-wrapper" *ngIf="mode==1">
+        <div class="container-fluid ">
+            <div class="row">
+
+                <!-- /.col-lg-12 -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="card" >
+                    <div class="card-header bg-info text-white">reservation d'un tournoi</div>
+                    <div class="card-body">
+                    
+                            
+                           
+                               <label> nom:</label><br> <input path="nom" class="form-control" placeholder="Nom" [(ngModel)]="tournoi.nom" required />
+                               <label>code tournoi:</label>  <br><input path="codetournoi" class="form-control" placeholder="codetournoi" [(ngModel)]="tournoi.codetournoi" />
+                               <label>ville salle:</label> <select class="form-control" [(ngModel)]="tournoi.villeSalle"  >
+                                <option>Casablanca</option>
+                                <option  >Rabat</option>
+                               </select> 
+                              <br>
+                               <label>numero telephone:</label>  <br><input path="telephone" class="form-control" placeholder="numero telephone" [(ngModel)]="tournoi.num" />
+                               <label>  nombre d equipe total: </label><br> <input path="nombre" class="form-control" placeholder="nombre d equipe du tournoi"  [(ngModel)]="tournoi.nbrEquipeTotal" />
+                               <label> nombre d equipe: </label><br> <input path="nombre2" class="form-control" placeholder="nombre d equipe " [(ngModel)]="tournoi.nbrEquipe"  />
+
+                                   <label>nom salle:</label>  <br><input path="nom salle" class="form-control" placeholder="nom salle" [(ngModel)]="tournoi.nomSalle" />
+                                   
+                                    
+                                   <br>
+                                 <button class="btn btn-success " (click)="mode=2" align="center">save</button>
+                                
+                                
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="card-footer">
+                                  
+                    </div>
+                    </div>
+                   
+                              
+                  
+                  <br>
+
+                  <form class="example-form" >
+                    <mat-form-field class="example-full-width">
+                      <input type="text" placeholder="code Tournoi" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto"  [(ngModel)]="codeTournoi">
+                      <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async "  [value]="option" >
+                          {{option}} 
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                
+                      </form>
+                 
+                  <hr>
+                 
+               
+                  <button class="btn btn-success " (click)="chercher()" >chercher</button>
+               <br>
+                  <br>
+                
+                   
+                  <table class="table table-striped">
+                        <thead>
+                          <tr class="table-primary">
+                            <th scope="col">codeTournoi</th>
+                            <th scope="col">nom</th>
+                            <th scope="col">ville</th>
+                            <th scope="col">nom salle</th>
+                            
+                            <th scope="col">verification</th>
+                        
+                       
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr  *ngFor="let tournoi of pageTournoi">
+                           <td>{{tournoi.codetournoi}}</td>
+                           <td>{{tournoi.nom}}</td>
+                           <td>{{tournoi.villeSalle}}</td>
+                           <td>{{tournoi.nomSalle}}</td>
+                           <td>{{tournoi.verification}}</td>
+                          
+                           
+                           
+                           
+                         
+                           
+                          </tr>
+                        </tbody>
+                      </table>
+                
+                    </div>
+
+<div class="container-fluid "*ngIf="mode==2">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header"> confirmation</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <br>
+  
+  <div class="card">
+          <div class="card-header bg-info text-white">reservation d'un tournoi</div>
+          <div class="card-body">
+              <label> nom:</label><label>{{tournoi.nom}}</label><br>
+              <label>code tournoi:</label>  <label>{{tournoi.codetournoi}}</label><br>
+              <label>ville salle:</label> <label>{{tournoi.villeSalle}}</label>
+              
+                   
+                  <br>
+                 
+                <button class="btn btn-success" (click)="saveTournoi()">save</button>
+                
+                <button class="btn btn-danger pull-right" (click)="mode=1"  >annuler</button>
+       
+           </div>

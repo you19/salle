@@ -1,0 +1,126 @@
+
+
+    
+<div  *ngIf="mode==1" id="content" #content   >
+        <div class="container-fluid">
+            <div class="row">
+               
+                <!-- /.col-lg-12 -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="card">
+               
+                    <div class="card-header bg-info text-white">reservation d'un match</div>
+                    <div class="card-body">
+                            <div class="form-group">
+                                codematch:<br> <input path="codematch" class="form-control" placeholder="codematch" [(ngModel)]="match.codematch"  />
+                               
+                                
+                                  nom:<br> <input path="nom" class="form-control" placeholder="Nom" [(ngModel)]="match.nom" />
+                                  <label>ville salle:</label> <select class="form-control" [(ngModel)]="match. villeSalle">
+                                    <option>Casablanca</option>
+                                    <option>Rabat</option>
+                                   </select> 
+                                  <br>
+                                  
+                                   <label>nom salle:</label>  <br><input path="salle" class="form-control" placeholder="nom salle" [(ngModel)]="match.nomSalle"/>
+                                   <label>date:</label>  <br><input type="date" path="date" class="form-control" placeholder="date"  [(ngModel)]="match.jour" />
+                                    <label> temps de depart: </label><br> 
+                                    <select class="form-control"  [(ngModel)]="match.tempsDepart"> 
+                                    <option>7:00</option>
+                                    <option>8:00</option>
+                                    <option>9:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                    <option>15:00</option>
+                                    <option>16:00</option>
+                                    <option>17:00</option>
+                                    <option>18:00</option>
+                                    <option>19:00</option>
+                                   </select>
+                                   <label>temps de fin:</label> <br> 
+                                   <select class="form-control" [(ngModel)]="match.tempsFin">
+                                        <option>8:00</option>
+                                        <option>9:00</option>
+                                        <option>10:00</option>
+                                        <option>11:00</option>
+                                        <option>12:00</option>
+                                        <option>16:00</option>
+                                        <option>17:00</option>
+                                        <option>18:00</option>
+                                        <option>19:00</option>
+                                        <option>20:00</option>
+
+                                       
+                                    </select>
+                                   <br>
+                                   <div *ngIf="message==1"    >
+                                    <p>
+                                        <ngb-alert  type="success"  >
+                                          <strong>Success!</strong>  vous avez fait votre reservation avec succés
+                                          <button (click)="downloadPDF()">pdf</button>
+                                        </ngb-alert>
+                                      </p>
+                                </div>
+                                <div *ngIf="message==0" >
+
+                                  <br>
+                                  <br>
+                                    <p>
+                                        <ngb-alert  type="danger">
+                                          <strong>Failed!</strong>  vous devez changer le temps de votre reservation
+                                          
+                                        </ngb-alert>
+                                      </p>
+                                 </div>
+                                   <button class="btn btn-success " (click)="saveMatch()" align="center">save</button>
+                            </div>
+                            </div>
+                          
+                       
+                            <div class="card-footer">
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="container-fluid "*ngIf="mode==2"  >
+                      <br>
+                      <br>
+
+                        <p>
+                                <ngb-alert  type="success"  >
+                                  <strong>Success!</strong>  vous avez fait votre reservation avec succés
+                                  
+                                </ngb-alert>
+                              </p>
+                              <br>
+                              
+                    <div class="card"  id="content" #content>
+                            <div class="card-header bg-info text-white" ><h1>information de votre reservation </h1></div>
+                            <div class="card-body">
+                                    <div class="form-group">
+                                    <br>
+                                    <strong class="text-danger"> nom:</strong><label>{{match.nom}}</label><br>
+                                  
+                                    <strong class="text-danger">ville salle:</strong> <label class="font-italic">{{match.villeSalle}}</label> <br>
+                                    <strong class="text-danger">nom salle:</strong> <label class="font-italic">{{match.nomSalle}}</label> <br>
+                                    <strong class="text-danger">jour:</strong> <label class="font-italic">{{match.jour}}</label> <br>
+                                    <strong class="text-danger">temps depart:</strong> <label class="font-italic">{{match.tempsDepart}}</label> <br>
+                                    <strong class="text-danger">temps fin:</strong> <label class="font-italic">{{match.tempsFin}}</label> <br>
+                                    
+                                         
+                                        <br>
+                                       
+                                        <button class="btn btn-success" (click)="downloadPDF()"> generer votre demande</button>
+                                      
+                                 </div>
+                                 </div>
+                             
+                        
+                        <!-- /.col-lg-12 -->
+                    
+               
+

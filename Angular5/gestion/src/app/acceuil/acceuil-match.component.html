@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+      <tr class="table-primary">
+        
+        <th scope="col">nom</th>
+        <th scope="col">ville</th>
+        <th scope="col">nom salle</th>
+        <th scope="col">jour</th>
+        <th scope="col">tempsDepart</th>
+        
+        <th scope="col">tempsFin</th>
+    
+   
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let tournoi of pageTournoi">
+      
+       <td>{{tournoi.nom}}</td>
+       <td>{{tournoi.villeSalle}}</td>
+       <td>{{tournoi.nomSalle}}</td>
+      
+       <td>{{tournoi.jour}}</td>
+       <td>{{tournoi.tempsDepart}}</td>
+       <td>{{tournoi.tempsFin}}</td>
+     

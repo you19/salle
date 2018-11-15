@@ -1,0 +1,97 @@
+<img src="assets/images/nature/5.png" alt="Girl in a jacket">
+<table class="table table-striped">
+  <thead>
+    <tr class="table-primary">
+      
+      <th scope="col">photo</th>
+      
+      <th scope="col">nom</th>
+      <th scope="col">prix reservation d une heure</th>
+    
+     
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+     <td><img src="assets/images/nature/6.jpg" alt="Girl in"width="80" height="60"></td>
+     <td>T-shirt</td>
+     <td> 20 DH</td>
+  
+    </tr>
+ 
+  <tr >
+    <td><img src="assets/images/nature/7.jpg" alt="Gir"width="80" height="60"></td>
+    <td>ballon</td>
+    <td> 25 DH</td>
+ 
+   </tr>
+   <tr >
+    <td><img src="assets/images/nature/8.jpg " alt="Girl in a jac" width="80" height="60"></td>
+    <td>spadri</td>
+    <td> 30 DH</td>
+ 
+   </tr>
+  </tbody>
+  
+
+
+
+
+</table>
+<br>
+<br>
+<h1>choisir l accessoire que tu veux l ouer et le nombre en ligne dan notre site</h1>
+      <div class="card">
+        <div class="card-header bg-info text-white">Louer un accessoire</div>
+        <div class="card-body">
+               <div>
+                    
+                      nom:<br> <input path="nom" class="form-control" placeholder="Nom" [(ngModel)]="accessoire.nom" />
+                      
+                      <br>
+                       <label>categorie accessoire:</label>  <br><select path="accessoire" class="form-control" [(ngModel)]="accessoire.nomAccessoire">
+                         <option>T-shirt</option>
+                         <option>ballon</option>
+                         <option>spadri</option>
+                       </select>
+                       <label>nombre</label>  <br><input path="nombre" class="form-control" placeholder="nombre"  [(ngModel)]="accessoire.nombre" />
+                       <label>nom salle:</label>  <br><input path="salle" class="form-control" placeholder="nom salle"  [(ngModel)]="accessoire.nomSalle"/>
+                       <label>jour:</label>  <br><input type="date" path="date" class="form-control" placeholder="date"  [(ngModel)]="accessoire.jour" />
+                        
+                        <label> temps de depart: </label><br> 
+                        <select class="form-control"  [(ngModel)]="accessoire.tempsDepart"> 
+                        <option>7:00</option>
+                        <option>8:00</option>
+                        <option>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:00</option>
+                        <option>19:00</option>
+                       </select>
+                       <label>temps de fin:</label> <br> 
+                       <select class="form-control"  [(ngModel)]="accessoire.tempsFin">
+                            <option>8:00</option>
+                            <option>9:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+
+                           
+                        </select>
+                       <br>
+                      <button class="btn btn-success" (click)="  saveAccessoire()" >Confirmer</button>
+                </div>
+                </div>
+                
+                <div class="card-footer">
+        </div>
+      </div>

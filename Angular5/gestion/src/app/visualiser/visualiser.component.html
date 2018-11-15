@@ -1,0 +1,98 @@
+<div class="col-lg-4"></div>
+<div class="col-lg-8">  
+    <h1><strong> Casablanca Ain sebaa Boulevard Moulay Ismaïl </strong> </h1>
+    <p>city club est ouvert de lundi jusqu a samedi de 8:00 a 22:00</p> </div>
+    
+    <div class="row body">
+        <div class="col-lg-2"></div>
+      <div class="col-lg-8">  
+  
+    <ngb-carousel >
+      <ng-template ngbSlide>
+        <img src="assets/images/nature/terrain.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="400"  style="display: block; width: 100%;"> 
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="assets/images/nature/4.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="400"  style="display: block; width: 100%;"> 
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="assets/images/nature/terrain2.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="400" style="display: block; width: 100%;"> 
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </ng-template>
+    
+    </ngb-carousel>
+    <br>
+    <br>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-8">
+    <label><strong>commantaire</strong></label>
+    </div>
+    
+    <textarea class="form-control"  placeholder="commentaire...">
+      </textarea>
+      <br>
+      <button class="btn btn-success" (click)="saveBlack()"  >Confirmer</button>
+     </div>   
+   <br>
+   <br>
+   
+   <div class="col-lg-2"></div>
+   <div class="col-lg-8"> 
+    <h1> <strong>Avenue Mohamed V </strong> </h1>
+    <p>city club est ouvert de lundi jusqu a samedi de 8:00 a 22:00</p> </div>
+    <div class="row body">
+       
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8"> 
+  
+    <ngb-carousel >
+      <ng-template ngbSlide>
+        <img src="assets/images/nature/terrain4.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="400"  style="display: block; width: 100%;"> 
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="assets/images/nature/terrain 3.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="400"  style="display: block; width: 100%;"> 
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </ng-template>
+     
+    
+    </ngb-carousel>
+    <br>
+    <br>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-8">
+    
+    <label><strong>commantaire</strong></label>
+    </div>
+
+    <textarea class="form-control"  placeholder="commentaire...">
+      </textarea>    
+      <br>
+      <button class="btn btn-success" (click)="saveBlack()"  >Confirmer</button>
+   </div>
+   <div>
+    Component hello
+    <br/>
+    <br />
+    global role: <b>{{globals.role}}</b>
+  </div>
+  <div>
+    <input [(ngModel)]="role" />
+    <button (click)="changedRole()">aplly</button>
+  </div>

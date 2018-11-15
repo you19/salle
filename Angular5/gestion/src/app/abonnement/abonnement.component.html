@@ -1,0 +1,98 @@
+<div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+              <br>
+                <!-- /.col-lg-12 -->
+            </div>
+            <br>
+            <br>
+            <div class="card">
+                    <div class="card-header bg-info text-white">gestion abonnement</div>
+                    <div class="card-body">
+                            <div class="form-group">
+                               <label>code abonnement:</label> <br> <input path="codeabonnement" class="form-control" placeholder="code abonnement" [(ngModel)]="abonnement.codeabonnement"/>
+                                
+                               <label>ville salle:</label> <select class="form-control" [(ngModel)]="abonnement.VilleSalle">
+                                <option>Casablanca</option>
+                                <option>Rabat</option>
+                               </select> 
+                               <label> nom salle:</label><br> <input path="salle" class="form-control" placeholder="nom salle"  [(ngModel)]="abonnement.nomSalle" />
+                               <label> nom:</label><br> <input path="nom" class="form-control" placeholder="Nom"  [(ngModel)]="abonnement.nom" />
+                
+                               <label>date d epart:</label>  <br><input type="date" path="date" class="form-control" placeholder="date d epart"  [(ngModel)]="abonnement.dateEpart" />
+                               <label>date fin:</label>  <br><input type="date" path="date1" class="form-control" placeholder="date fin"  [(ngModel)]="abonnement.dateFin" />
+                               
+                            <label> temps de depart: </label><br> 
+                            <select class="form-control"  [(ngModel)]="abonnement.tempsDepart"> 
+                            <option>7:00</option>
+                            <option>8:00</option>
+                            <option>9:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                           </select>
+                           <label>temps de fin:</label> <br> 
+                           <select class="form-control"  [(ngModel)]="abonnement.tempsFin">
+                                <option>8:00</option>
+                                <option>9:00</option>
+                                <option>10:00</option>
+                                <option>11:00</option>
+                                <option>12:00</option>
+                                <option>16:00</option>
+                                <option>17:00</option>
+                                <option>18:00</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+
+                               
+                            </select>
+                                    
+                                   <br>
+                                  <button class="btn btn-success" (click)="saveAbonnement()">Confirmer</button>
+                            </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  entrer ton code d abonnemet:  <input type="text" [(ngModel)]="codeAbonnement" class="relative" /> <hr>
+                  <button class="btn btn-info" (click)="chercher()" >chercher</button>
+                  
+                  <br>
+                  <br>       
+                  <table class="table table-striped">
+                    <thead>
+                      <tr class="table-primary">
+                        <th scope="col">codeAbonnement</th>
+                        <th scope="col">nom</th>
+                        <th scope="col">ville</th>
+                        <th scope="col">nom salle</th>
+                        <th scope="col">date d epart</th>
+                        <th scope="col">date fin</th>
+
+                        <th scope="col">verification</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr  *ngFor="let abonnement of pageAbonnement">
+                       <td>{{abonnement.codeabonnement}}</td>
+                       <td>{{abonnement.nom}}</td>
+                       <td>{{abonnement.VilleSalle}}</td>
+                       <td>{{abonnement. nomSalle}}</td>
+                       <td>{{abonnement.dateEpart}}</td>
+                       <td>{{abonnement.dateFin}}</td>
+                       <td>{{abonnement.verification}}</td>
+                       
+                     
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+                

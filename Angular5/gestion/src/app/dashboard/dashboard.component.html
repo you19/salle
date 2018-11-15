@@ -1,0 +1,37 @@
+
+<img src="assets/images/nature/5.png" alt="Girl in a jacket">
+
+
+<div class="col-lg-10">
+<P>
+    Les sports de foot en salle, tels que le fut 5, le 3×3 et le jorkyball sont des sports qui se développent rapidement, avec un esprit de fairplay.</P>
+<p>Le foot en salle a su séduire un grand nombre de joueurs même ceux qui n’ont jamais pratiqué le foot !  Son public est relativement jeune et complètement à l’aise avec l’outil informatique et l’internet.</p>
+<div>
+ <p> <strong>notre site</strong>   est parfaitement adapté à la gestion des  joueurs et des clubs de foot indoor car il résoud la problématique de réservation à 4 ou plus ! </p>
+<p>Avec un haut niveau de service, notre site offre une solution de réservation en ligne sur mesure en incluant les adaptations graphiques de chaque club ! Evitez la fuite des clients : Chaque club a donc son propre système de réservation en ligne avec le graphisme qui lui convient !</p>
+</div> 
+<br>
+<br>
+<div class="card">
+        <div class="card-header bg-info text-white">Nouveau promotion :</div>
+        <div class="card-body">
+
+<p *ngFor="let dash of pageDash">
+
+ -est voila les nouveau promotion dans  salle  <strong> {{dash.nomSalle}} </strong> dans la ville  <strong>   {{dash.villeSalle}} </strong> debut le <strong>{{dash.dateEpart}} jusqu a {{dash.dateFin}} </strong>  notre promotion sera <strong> {{dash.description}}</strong>
+<br>
+<br>
+</p>
+</div>
+</div>
+</div>
+<div>
+    Component hello
+    <br/>
+    <br />
+    global role: <b>{{globals.role}}</b>
+  </div>
+  <div>
+    <input [(ngModel)]="role" />
+    <button (click)="changedRole()">aplly</button>
+  </div>

@@ -1,0 +1,97 @@
+<br>
+<br>
+
+      <div class="card">
+        <div class="card-header bg-info text-white">envoyer une demande</div>
+        <div class="card-body">
+               <div>
+                  global role: <b>{{globals.rol}}</b>
+                      nom:<br> <input path="nom" class="form-control" placeholder="Nom" [(ngModel)]="message.nom" />
+                      
+                      <br>
+                      
+                       <label>nom salle:</label>  <br><input path="salle" class="form-control" placeholder="nom salle"[(ngModel)]="message.nomSalle" />
+                       <label>ville salle:</label> <select class="form-control" [(ngModel)]="message. villeSalle">
+                        <option>Casablanca</option>
+                        <option>Rabat</option>
+                       </select> 
+                      <br>
+                      
+                       <label>jour:</label>  <br><input type="date" path="date" class="form-control" placeholder="date"[(ngModel)]="message.jour" />
+                        
+                        <label> temps de depart: </label><br> 
+                        <select class="form-control" [(ngModel)]="message.tempsDepart"> 
+                        <option>7:00</option>
+                        <option>8:00</option>
+                        <option>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:00</option>
+                        <option>19:00</option>
+                       </select>
+                       <label>temps de fin:</label> <br> 
+                       <select class="form-control" [(ngModel)]="message.tempsFin" >
+                            <option>8:00</option>
+                            <option>9:00</option>
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+
+                           
+                        </select>
+                       <br>
+                      <button class="btn btn-success" (click)="saveMessage()">Confirmer</button>
+                </div>
+                </div>
+                
+                <div class="card-footer">
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      entrer ton nom: <input path=""  placeholder="nom"  [(ngModel)]="nom" /> 
+               <button class="btn btn-success" (click)="chercher()">rechercher</button>
+      <br>
+      <br>       
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">codeCandidature</th>
+            <th scope="col">nom</th>
+            <th scope="col">ville</th>
+            <th scope="col">nom salle</th>
+            <th scope="col">jour</th>
+            <th scope="col">temps d epart</th>
+            <th scope="col">temps de fin</th>                        
+            <th scope="col">verification</th>
+          
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let  tournoi of pageCandidature">
+           <td>{{tournoi.codeCandidature}}</td>
+           <td>{{tournoi.nom}}</td>
+           <td>{{tournoi.villeSalle}}</td>
+           <td>{{tournoi.nomSalle}}</td>
+        
+           <td>{{tournoi.jour}}</td>
+           <td>{{tournoi.tempsDepart}}</td>
+           <td>{{tournoi.tempsFin}}</td>
+           <td>{{tournoi.verification}}</td>
+          
+           
+         
+           
+          </tr>
+        </tbody>
+      </table>
